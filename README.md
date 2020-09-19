@@ -8,6 +8,8 @@ This app requires the following packages to be installed on you system:
 * Ruby 2.7.0
 * Rails 6.0.3.2
 
+## Live Demo
+[Open Live Demo](https://alpha-blog-kedir.herokuapp.com/)
 ## Setup configurations
 
 To get this app ready to run, follow this steps:
