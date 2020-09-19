@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ #logo {
+    font-size: 1.7em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
