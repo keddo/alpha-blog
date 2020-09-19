@@ -1,21 +1,4 @@
-<% if @article.errors.any? %>
- <div class="row">
-   <div class="col-md-2"></div>
-   <div class="col-md-8">
-      <div class="card text-white bg-danger mb-3">
-      <div class="card-header"><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved: </div>
-      <div class="card-body">
-      <ul>
-      <%= @article.errors.full_messages.each do |msg| %>
-      <li class="card-text"><%= msg %> </li>
-      <% end %>
-      </ul>
-      </div>
-   </div>
-   </div>
-   <div class="col-md-2"></div>
-</div>
-<% end %>
+<%= render 'shared/errors' %>
 <div class="row">
    <div class="col-md-2"></div>
    <div class="col-md-8">
