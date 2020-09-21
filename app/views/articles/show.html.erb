@@ -1,5 +1,24 @@
-<h2 class="text-center"> Title:  <%= @article.title %> </h2>
-<div class="card col-md-8 offset-md-2 pb-3">
+<h2 class="text-center mb-4"> Title:  <%= @article.title %> </h2>
+<% if @article.user %>
+<div class="row mb-5">
+<div class="col-md-6 offset-md-3">
+<div class="card p-3">
+<div class="media">
+<%= link_to gravatar_for(@article.user), user_path(@article.user), class: 'mr-3' %>
+<div class="media-body">
+  <h5 class="mt-0"><%= link_to @article.user.username, user_path(@article.user) %></h5>
+   <ul class="list-group">
+   <li class="list-group-item">
+      <small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small>
+   </li>
+   </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<% end %>
+<div class="card col-md-6 offset-md-3 pb-3">
   <h4 class="text-center pt-2"><strong>Description: </strong></h4>
   <hr>
   <%= simple_format(@article.description) %>
